@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <article>
+        <header>
+          <h1>{{ .Title }}</h1>
+        </header>
+        {{ .Content }}
+        <div>
+          <p>Page resource, alt text set. Width 300.</p>
+          {{ partial "picture"  (dict
+          "ctx" .
+          "src" "placeholder1.jpg"
+          "width" 300
+          "alt" "Test image"
+          )}}
+        </div>
+        <div>
+          <p>Global resource, title text set. Auto alt text (Image of...) Width 300.</p>
+          {{ partial "picture"  (dict
+          "ctx" .
+          "src" "assets/images/placeholder2.jpg"
+          "width" 300
+          "title" "placeholder"
+          )}}
+        </div>
+     
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}
