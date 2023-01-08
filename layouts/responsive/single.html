@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <article>
+        <header>
+          <h1>{{ .Title }}</h1>
+        </header>
+        {{ .Content }}
+        <div class="col-md-6">
+          <p>Responsive image, col-md-6</p>
+          {{ partial "picture"  (dict
+          "ctx" .
+          "src" "placeholder1.jpg"
+          "alt" "Test image"
+          "sizes" "(min-width: 768px) 50vw, 100vw"
+          )}}
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}

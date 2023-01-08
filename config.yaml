@@ -7,3 +7,8 @@ title: My New Hugo Site
 module:
   imports:
   - path: github.com/future-wd/hugo-responsive-images
+
+
+params:
+  image:
+    widths: [640, 900, 1400]
