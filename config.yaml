@@ -12,3 +12,4 @@ module:
 params:
   image:
     widths: [640, 900, 1400]
+    loading: lazysizes

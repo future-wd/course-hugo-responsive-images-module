@@ -1,0 +1,3 @@
+img[data-sizes="auto"] { display: block; width: 100%; }
+/* so bootstrap 5 figures display correctly */
+.figure {display: block}

@@ -20,5 +20,25 @@
       </article>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Responsive image, col-md-6</p>
+      {{ partial "picture"  (dict
+      "ctx" .
+      "src" "placeholder2.jpg"
+      "alt" "Test image"
+      )}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Responsive image, col-md-6</p>
+      {{ partial "picture"  (dict
+      "ctx" .
+      "src" "placeholder3.jpg"
+      "alt" "Test image"
+      )}}
+    </div>
+  </div>
 </div>
 {{ end }}
