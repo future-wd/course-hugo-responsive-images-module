@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <article>
+        <header>
+          <h1>{{ .Title }}</h1>
+        </header>
+        {{ .Content }}
+        <div class="col-md-6">
+          <p>Responsive image, col-md-6</p>
+          {{ partial "figure"  (dict
+            "ctx" .
+            "src" "placeholder3.jpg" 
+            "figcaption_title" "Mountains"
+            "caption" "Taken during my holiday"
+            "figcaption_title_h" 3
+            "attr" "Author name"
+            "attr_link" "http://www.author-page.com"
+            ) }}
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}
