@@ -6,6 +6,12 @@ menu: main
 weight: 60
 image:
   widths: [640, 950, 1300]
+resources:
+- src: images/placeholder5.jpg
+  params:
+    aspect_ratio: [1,1]
+    loading: eager
+    sizes: "(min-width: 768px) 60wv, 100vw"
 ---
 
 ## Shortcode - Aspect ratio 4:3 widths 400,900,1300px

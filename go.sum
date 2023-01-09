@@ -3,3 +3,5 @@ github.com/future-wd/hugo-responsive-images v1.2.0 h1:317r/NGku1PNdt6PSE2N1hlq7j
 github.com/future-wd/hugo-responsive-images v1.2.0/go.mod h1:b8enU8rhitAE62fkxqfG+l/S14+pzwereZc3wKBmrIY=
 github.com/future-wd/hugo-responsive-images v1.2.1 h1:S10HEzVUpE09DH3HSN1l2g0hb933muG8RMJ7VM0D3tc=
 github.com/future-wd/hugo-responsive-images v1.2.1/go.mod h1:b8enU8rhitAE62fkxqfG+l/S14+pzwereZc3wKBmrIY=
+github.com/future-wd/hugo-responsive-images v1.2.3 h1:/oAAvnUNHj8LxCESu3jyKxuL23kAMNH7U6aySJwUCV8=
+github.com/future-wd/hugo-responsive-images v1.2.3/go.mod h1:b8enU8rhitAE62fkxqfG+l/S14+pzwereZc3wKBmrIY=
