@@ -1,0 +1,101 @@
+{{ define "main" }}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <article>
+        <header>
+          <h1>{{ .Title }}</h1>
+        </header>
+        {{ .Content }}
+        <div class="col-md-6">
+          <p>Responsive image, col-md-6</p>
+          {{ partial "picture"  (dict
+          "ctx" .
+          "src" "placeholder1.jpg"
+          "alt" "Test image"
+          "aspect_ratio" (slice 1 1)
+          "sizes" "(min-width: 768px) 50vw, 100vw"
+          "loading" "eager"
+          )}}
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Gallery with custom alt/title text</p>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    {{ range .Params.gallery }}
+    <div class="col p-2">
+      {{ partial "picture"  (dict
+      "ctx" $
+      "src" .src
+      "title" .title
+      "aspect_ratio" (slice 1 1)
+      "widths" (slice 360 550 700 1000)
+      )}}
+    </div>
+    {{ end }}
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Gallery from array - no title/alt set</p>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    {{ range $index, $photo :=.Params.gallery2 }}
+    <div class="col p-2">
+      {{ $title := printf "Product %v" (add $index 1) }}
+      {{ partial "picture"  (dict
+      "ctx" $
+      "src" $photo
+      "title" $title
+      "aspect_ratio" (slice 1 1)
+      "widths" (slice 360 550 700 1000)
+      )}}
+    </div>
+    {{ end }}
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Gallery from folder</p>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    {{ range $index, $photo := .Resources.Match "gallery/*" }}
+    <div class="col p-2">
+      {{ $title := printf "Product %v" (add $index 1) }}
+      {{ partial "picture"  (dict
+      "ctx" $
+      "src" $photo
+      "title" $title
+      "aspect_ratio" (slice 1 1)
+      "widths" (slice 360 550 700 1000)
+      )}}
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Gallery from all page resource images</p>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    {{ range $index, $photo :=   .Resources.ByType "image" }}
+    <div class="col p-2">
+      {{ $title := printf "Product %v" (add $index 1) }}
+      {{ partial "picture"  (dict
+      "ctx" $
+      "src" $photo
+      "title" $title
+      "aspect_ratio" (slice 1 1)
+      "widths" (slice 360 550 700 1000)
+      )}}
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
