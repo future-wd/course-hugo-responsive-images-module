@@ -1,3 +1,21 @@
-img[data-sizes="auto"] { display: block; width: 100%; }
+img[data-sizes='auto'] {
+  display: block;
+  width: 100%;
+}
 /* so bootstrap 5 figures display correctly */
-.figure {display: block}
+.figure {
+  display: block;
+}
+
+.img-wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .img-wrapper {
+    max-width: 60vw;
+  }
+}
+
