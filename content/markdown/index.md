@@ -4,11 +4,13 @@ date: 2022-07-06T00:36:24-08:00
 draft: false
 menu: main
 weight: 60
+image:
+  widths: [640, 950, 1300]
 ---
 
 ## Shortcode - Aspect ratio 4:3 widths 400,900,1300px
 
-{{< picture src=images/placeholder6.jpg aspect_ratio=16,9  widths=400,900,1300 alt="Test Image" >}}
+{{< picture src=images/placeholder6.jpg aspect_ratio=16,9  alt="Test Image" >}}
 
 ## Render hook using markdown image syntax - all defaults used
 
