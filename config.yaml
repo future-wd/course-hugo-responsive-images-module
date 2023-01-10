@@ -20,3 +20,4 @@ params:
     lqip_div_factor: 2 # lqip is 2x smaller than the smallest image in srcset
     gif_div_factor: 10 # single color gif placeholder will be 10x smaller than smallest image in srcset
     render_hook: true
+    noscript: true

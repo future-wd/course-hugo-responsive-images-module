@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Lang }}">
   <head>
+    <script>
+      const noJs = document.documentElement.classList.contains('no-js');
+      if (noJs) document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
     {{- partial "head.html" . -}}
   </head>
 

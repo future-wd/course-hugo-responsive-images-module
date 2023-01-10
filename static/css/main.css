@@ -19,3 +19,14 @@ img[data-sizes='auto'] {
   }
 }
 
+/* noscript css for responsive images */
+img.lazyload {
+  display: none;
+}
+noscript img.lazyload {
+  display: block;
+}
+.js img.lazyload  {
+  display: block;
+} 
+
